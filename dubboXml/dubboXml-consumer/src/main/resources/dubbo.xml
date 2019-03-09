@@ -16,12 +16,12 @@
     <dubbo:consumer check="false"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="orderService" interface="com.dubbo.service.OrderService" >
+    <dubbo:reference id="orderService" interface="com.dubbo.boot.service.OrderService" >
         <dubbo:method name="getDetail" cache="lru" />
     </dubbo:reference>
 
-    <dubbo:reference id="userService" interface="com.dubbo.service.UserService"  />
-    <dubbo:reference id="vipUserService" interface="com.dubbo.service.VipUserService"  />
+    <dubbo:reference id="userService" interface="com.dubbo.boot.service.UserService"  />
+    <dubbo:reference id="vipUserService" interface="com.dubbo.boot.service.VipUserService"  />
 
 
 </beans>

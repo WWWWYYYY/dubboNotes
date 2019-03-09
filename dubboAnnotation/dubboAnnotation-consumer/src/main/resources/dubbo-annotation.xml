@@ -15,6 +15,6 @@
 
     <dubbo:consumer check="false"/>
     <!--扫描需要注入 dubbo bean -->
-    <dubbo:annotation package="com.dubbo.controller" />
+    <dubbo:annotation package="com.dubbo.boot.controller" />
 
 </beans>

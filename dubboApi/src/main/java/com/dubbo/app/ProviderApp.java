@@ -4,8 +4,8 @@ import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.ServiceConfig;
-import com.dubbo.service.VipUserService;
-import com.dubbo.service.impl.VipUserServiceImpl;
+import com.dubbo.boot.service.VipUserService;
+import com.dubbo.boot.service.impl.VipUserServiceImpl;
 
 import java.io.IOException;
 

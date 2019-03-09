@@ -25,6 +25,6 @@
 
 
     <!--ps:实现类上使用 com.alibaba.dubbo.config.annotation.Service -->
-    <dubbo:annotation package="com.dubbo.service" />
+    <dubbo:annotation package="com.dubbo.boot.service" />
 
 </beans>

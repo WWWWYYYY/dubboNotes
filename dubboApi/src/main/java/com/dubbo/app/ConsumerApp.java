@@ -3,7 +3,7 @@ package com.dubbo.app;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
-import com.dubbo.service.VipUserService;
+import com.dubbo.boot.service.VipUserService;
 
 public class ConsumerApp {
 

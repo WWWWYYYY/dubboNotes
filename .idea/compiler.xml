@@ -10,6 +10,7 @@
         <module name="dubboAnnotationConsumer" />
         <module name="dubboAnnotationProvider" />
         <module name="dubboApi" />
+        <module name="dubboSpringboot" />
         <module name="dubboXml-api" />
         <module name="dubboXml-consumer" />
         <module name="dubboXml-provider" />
