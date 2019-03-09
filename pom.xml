@@ -10,6 +10,7 @@
     <modules>
         <module>dubboXml</module>
         <module>dubboAnnotation</module>
+        <module>dubboApi</module>
     </modules>
     <packaging>pom</packaging>
 

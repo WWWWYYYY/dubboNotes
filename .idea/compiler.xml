@@ -9,6 +9,7 @@
         <module name="dubboAnnitationApi" />
         <module name="dubboAnnotationConsumer" />
         <module name="dubboAnnotationProvider" />
+        <module name="dubboApi" />
         <module name="dubboXml-api" />
         <module name="dubboXml-consumer" />
         <module name="dubboXml-provider" />
