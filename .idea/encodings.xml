@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboAnnotation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboAnnotation/dubboAnnitation-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboAnnotation/dubboAnnotation-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboAnnotation/dubboAnnotation-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-provider" charset="UTF-8" />
+  </component>
+</project>
