@@ -4,19 +4,17 @@ import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class DubboConfiguration {
 
-    @Value("${dubbo.zookeeper}")
+    @Value("${spring.dubbo.zookeeper}")
     private String zkAddr;
-    @Value("${dubbo.name}")
+    @Value("${spring.dubbo.application.name}")
     private String appName;
     //生产者和消费者都要配置
-    @ConfigurationProperties(prefix = "spring.dubbo.application")
     @Bean
     public ApplicationConfig applicationConfig() {
         ApplicationConfig applicationConfig = new ApplicationConfig();

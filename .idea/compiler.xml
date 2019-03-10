@@ -11,6 +11,7 @@
         <module name="dubboAnnotationProvider" />
         <module name="dubboApi" />
         <module name="dubboSpringboot" />
+        <module name="dubboSpringboot2" />
         <module name="dubboXml-api" />
         <module name="dubboXml-consumer" />
         <module name="dubboXml-provider" />

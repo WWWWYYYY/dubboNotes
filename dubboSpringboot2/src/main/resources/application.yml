@@ -1,0 +1,19 @@
+#启动: nohup java   -Dspring.profiles.active=dev -jar synchronius-1.0.jar >  log.erp 2>&1 &
+server:
+  port: 8090
+  compression:
+    enabled: true
+  connection-timeout: 3000
+
+#spring.dubbo:
+#    name: dubboSpringboot
+#    zookeeper: zookeeper://127.0.0.1:2181
+swagger:
+  host: local.dev.com
+spring.dubbo:
+  application:
+    id: dubbo-consumer-demo
+    name: dubboSpringboot3
+  zookeeper: zookeeper://127.0.0.1:2181
+
+

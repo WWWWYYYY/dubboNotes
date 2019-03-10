@@ -11,6 +11,7 @@
         <module>dubboXml</module>
         <module>dubboAnnotation</module>
         <module>dubboApi</module>
+        <!--<module>dubboSpringboot2</module>-->
         <!--<module>dubboSpringboot</module>-->
     </modules>
     <packaging>pom</packaging>

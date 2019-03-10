@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/dubboAnnotation/dubboAnnotation-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboApi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboSpringboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboSpringboot2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-consumer" charset="UTF-8" />
