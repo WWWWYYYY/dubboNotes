@@ -20,6 +20,8 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
     <!-- 用dubbo协议在20880端口暴露服务 -->
+    <!--如果暴露的接口没有指定协议，这里定义了N种协议就会暴露N个不同协议的同一个接口，建议为接口指定协议
+    如果当前文件没有定义任何协议，接口也没有指定哪个协议，则默认为dubbo协议-->
     <dubbo:protocol name="dubbo" port="20880"/>
     <dubbo:protocol name="rmi" port="21880"/>
 
