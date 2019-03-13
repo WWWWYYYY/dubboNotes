@@ -1,9 +1,11 @@
 package com.dubbo.boot.controller;
 
 
+import com.alibaba.dubbo.rpc.RpcContext;
 import com.alibaba.dubbo.rpc.service.EchoService;
 import com.dubbo.boot.service.OrderService;
 import com.dubbo.boot.service.UserService;
+import com.dubbo.boot.service.VipUserService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 @Controller
 public class IndexController implements ApplicationContextAware {
@@ -26,6 +30,8 @@ public class IndexController implements ApplicationContextAware {
 
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private VipUserService vipUserService;
 
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
@@ -34,7 +40,28 @@ public class IndexController implements ApplicationContextAware {
         String id = request.getParameter("id");
         String userView = userService.getDetail(id);
         String orderView = orderService.getDetail(id);
+        String rtn =vipUserService.getVipDetail(id);//异步方法调用时返回值为null，必须通过future.get()获取返回值
+        Future<String> future = RpcContext.getContext().getFuture();
+        //在调用future.get()之前可以先执行其他业务代码
+        try {
+            rtn = future.get();//需要的时候get；阻塞状态
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
+        request.setAttribute("userView", userView);
+        request.setAttribute("orderView", orderView);
+        return "index";
+    }
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test(HttpServletRequest request, HttpServletResponse response) {
+
+        String id = "12345";
+        String userView = "666";
+        String orderView = "666";
+        vipUserService.getVipDetail(id);//异步方法调用时返回值为null，必须通过future.get()获取返回值
         request.setAttribute("userView", userView);
         request.setAttribute("orderView", orderView);
         return "index";

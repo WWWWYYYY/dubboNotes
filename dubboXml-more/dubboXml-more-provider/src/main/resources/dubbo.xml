@@ -20,20 +20,23 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
     <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
-    <dubbo:protocol name="rmi" port="21880"/>
+    <dubbo:protocol name="dubbo" port="20881"/>
+    <!--<dubbo:protocol name="rmi" port="21880"/>-->
 
     <!-- 声明需要暴露的服务接口 ps：orderService必须要在当前xml中定义，不能使用包扫描的方式查找orderService，不然找不到orderService bean-->
-    <dubbo:service interface="com.dubbo.boot.service.OrderService" ref="orderService" protocol="dubbo">
+    <dubbo:service interface="com.dubbo.boot.service.OrderService" ref="orderService" protocol="dubbo" />
+
+    <dubbo:service interface="com.dubbo.boot.service.UserService" ref="userService" protocol="dubbo">
         <dubbo:method name="getDetail" cache="lru" />
     </dubbo:service>
-
-    <dubbo:service interface="com.dubbo.boot.service.UserService" ref="userService" protocol="dubbo"/>
     <dubbo:service interface="com.dubbo.boot.service.VipUserService" ref="vipUserService" protocol="dubbo" />
+
+    <dubbo:service interface="com.dubbo.boot.service.OtherService" ref="otherService" protocol="dubbo" />
 
      <!--和本地bean一样实现服务 -->
     <bean id="orderService" class="com.dubbo.boot.service.impl.OrderServiceImpl"/>
     <bean id="userService" class="com.dubbo.boot.service.impl.UserServiceImpl"/>
     <bean id="vipUserService" class="com.dubbo.boot.service.impl.VipUserServiceImpl"/>
+    <bean id="otherService" class="com.dubbo.boot.service.impl.OtherServiceImpl"/>
 
 </beans>

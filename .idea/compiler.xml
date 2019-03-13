@@ -18,6 +18,7 @@
         <module name="dubboXmlMoreApi" />
         <module name="dubboXmlMoreConsumer" />
         <module name="dubboXmlMoreProvider" />
+        <module name="springRmi" />
       </profile>
     </annotationProcessing>
   </component>

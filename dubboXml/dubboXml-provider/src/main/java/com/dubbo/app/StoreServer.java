@@ -3,8 +3,10 @@ package com.dubbo.app;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.IOException;
+
 public class StoreServer {
-    public static void main(String[] args)   {
+    public static void main(String[] args) throws IOException {
         /**
          * dubbo.xml
          * dubbo_annotation.xml
@@ -15,6 +17,6 @@ public class StoreServer {
 
         System.out.println("-----dubbo开启-----");
 
-//        System.in.read(); // 为保证服务一直开着，利用输入流的阻塞来模拟
+        System.in.read(); // 为保证服务一直开着，利用输入流的阻塞来模拟
     }
 }

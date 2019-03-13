@@ -9,7 +9,6 @@ public class StoreServer {
     public static void main(String[] args) throws IOException {
         /**
          * dubbo.xml
-         * dubbo_annotation.xml
          */
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:dubbo.xml");

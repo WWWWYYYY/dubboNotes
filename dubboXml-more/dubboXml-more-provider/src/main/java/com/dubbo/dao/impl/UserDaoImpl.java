@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 public class UserDaoImpl implements UserDao {
     @Override
     public String getDetail(String id) {
-        return "用户余额：200元";
+        return "用户余额：333";
     }
 }

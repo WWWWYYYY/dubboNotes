@@ -8,6 +8,6 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public String getDetail(String id) {
 
-        return "订单金额500元";
+        return "666";
     }
 }

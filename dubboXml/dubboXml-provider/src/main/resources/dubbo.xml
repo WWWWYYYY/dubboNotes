@@ -24,11 +24,11 @@
     <dubbo:protocol name="rmi" port="21880"/>
 
     <!-- 声明需要暴露的服务接口 ps：orderService必须要在当前xml中定义，不能使用包扫描的方式查找orderService，不然找不到orderService bean-->
-    <dubbo:service interface="com.dubbo.boot.service.OrderService" ref="orderService" protocol="dubbo">
-        <dubbo:method name="getDetail" cache="lru" />
+    <dubbo:service interface="com.dubbo.boot.service.OrderService" ref="orderService" protocol="dubbo" >
+        <!--<dubbo:method name="getDetail" cache="lru" />-->
     </dubbo:service>
 
-    <dubbo:service interface="com.dubbo.boot.service.UserService" ref="userService" protocol="rmi"/>
+    <dubbo:service interface="com.dubbo.boot.service.UserService" ref="userService" protocol="dubbo" />
     <dubbo:service interface="com.dubbo.boot.service.VipUserService" ref="vipUserService" />
 
      <!--和本地bean一样实现服务 -->

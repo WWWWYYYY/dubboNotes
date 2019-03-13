@@ -11,6 +11,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getDetail(String id) {
         System.out.println(super.getClass().getName()+"被调用一次："+System.currentTimeMillis());
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return userDao.getDetail(id);
     }
 

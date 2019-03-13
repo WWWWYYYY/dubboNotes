@@ -12,6 +12,7 @@
         <module>dubboAnnotation</module>
         <module>dubboApi</module>
         <module>dubboXml-more</module>
+        <module>spring-rmi</module>
         <!--<module>dubboSpringboot2</module>-->
         <!--<module>dubboSpringboot</module>-->
     </modules>

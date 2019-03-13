@@ -13,15 +13,22 @@
     <!-- 使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:consumer check="false"/>
+    <dubbo:consumer  cluster="failover" retries="2" loadbalance="random" timeout="1000" check="false"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="orderService" interface="com.dubbo.boot.service.OrderService" >
+    <dubbo:reference id="orderService" interface="com.dubbo.boot.service.OrderService" loadbalance="roundrobin"   cluster="failover" retries="2" timeout="1000"   />
+
+
+    <dubbo:reference id="userService" interface="com.dubbo.boot.service.UserService"  >
         <dubbo:method name="getDetail" cache="lru" />
     </dubbo:reference>
 
-    <dubbo:reference id="userService" interface="com.dubbo.boot.service.UserService"  />
-    <dubbo:reference id="vipUserService" interface="com.dubbo.boot.service.VipUserService"  />
+    <dubbo:reference id="vipUserService" interface="com.dubbo.boot.service.VipUserService"  >
+        <!--<dubbo:method name="getVipDetail" async="true" />-->
+        <dubbo:method name="getVipDetail" async="true"  onreturn="callBack.dealResult" onthrow="callBack.error"/>
+    </dubbo:reference>
 
+    <dubbo:reference id="otherService" interface="com.dubbo.boot.service.OtherService" generic="true" />
 
+    <bean id="callBack" class="com.dubbo.async.Callback"/>
 </beans>
