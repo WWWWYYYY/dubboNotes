@@ -10,6 +10,10 @@
     <file url="file://$PROJECT_DIR$/dubboSpringboot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboSpringboot2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml-more" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml-more/dubboXml-more-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml-more/dubboXml-more-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubboXml-more/dubboXml-more-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboXml/dubboXml-provider" charset="UTF-8" />

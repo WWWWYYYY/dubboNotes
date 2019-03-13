@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/dubboAnnotation/dubboAnnotation-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/dubboXml-more/dubboXml-more-consumer" />
     <file type="web" url="file://$PROJECT_DIR$/dubboXml/dubboXml-consumer" />
   </component>
   <component name="MavenProjectsManager">

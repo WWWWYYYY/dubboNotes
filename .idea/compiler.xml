@@ -15,6 +15,9 @@
         <module name="dubboXml-api" />
         <module name="dubboXml-consumer" />
         <module name="dubboXml-provider" />
+        <module name="dubboXmlMoreApi" />
+        <module name="dubboXmlMoreConsumer" />
+        <module name="dubboXmlMoreProvider" />
       </profile>
     </annotationProcessing>
   </component>
